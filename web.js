@@ -7,7 +7,7 @@ var htmlfile = "index.html";
 app.use(express.logger());
 
 app.get('/', function(request, response) {
-  var html = fs.readFileSync(htmlfile).ToString()'
+  var html = fs.readFileSync(htmlfile).ToString();
   response.send(html);
 });
 

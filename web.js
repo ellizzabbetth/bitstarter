@@ -7,8 +7,8 @@ var htmlfile = "index.html";
 app.use(express.logger());
 
 app.get('/', function(request, response) {
-  var html = fs.readFileSync(htmlfile).ToString();
-  response.send(html);
+  var html = fs.readFileSync(htmlfile);
+  response.send(html.ToString());
 });
 
 var port = process.env.PORT || 5000;

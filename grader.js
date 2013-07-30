@@ -27,6 +27,11 @@ var cheerio = require('cheerio');
 var HTMLFILE_DEFAULT = "index.html";
 var CHECKSFILE_DEFAULT = "checks.json";
 
+var rest = require('restler');
+var URL_DEFAULT = 'http://calm-brook-4676.herokuapp.com';
+
+
+
 var assertFileExists = function(infile) {
     var instr = infile.toString();
     if(!fs.existsSync(instr)) {
@@ -40,9 +45,26 @@ var cheerioHtmlFile = function(htmlfile) {
     return cheerio.load(fs.readFileSync(htmlfile));
 };
 
+var cheerioStr = function(str){
+   return cheerio.load(str);
+}
+
 var loadChecks = function(checksfile) {
     return JSON.parse(fs.readFileSync(checksfile));
 };
+
+
+var checkStr = function(str, checksfile){
+   $ = cheerioStr(str);
+   var checks = loadChecks(checksfile).sort();
+   var out = {};
+   var (var ii in checks){
+      var present = $(checks[ii]).length > 0;
+      out[checks[ii]] = present;
+   }  
+   return out;
+}
+
 
 var checkHtmlFile = function(htmlfile, checksfile) {
     $ = cheerioHtmlFile(htmlfile);

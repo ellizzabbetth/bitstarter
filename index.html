@@ -42,17 +42,89 @@
       }
       .linediv-r {
           border-top: 1px white solid;
-      |}  
+      }  
     }
+
+
+     /* All form factors */
+
+     /* Main body and headings */
+     body {
+        font-family: 'Open Sans', Helvetica, Arial, san-serif;
+     }
+      .heading, .subheading {
+        font-family: 'Ubuntu', Helvetica, Arial, san-serif;
+        text-aligh: center; 
+     }
+     p.lead {
+        padding-top: 1.5%;
+        font-size: 24px;
+        line-height: 30px;
+     } 
+     p {
+        font-size: 18px;
+        line-height: 24px;
+     }
+
+     /* Video pitch and Action */
+     .pitch {
+         padding: 2.5% 0%;
+     }
+
+     .order {
+         padding: 2% 0%; 
+     }
+
+     .actions {
+         background-color: #343434;
+         padding: 3% 0%;
+     }
 
 
       .navigation, .pitch, .section1, .section2, .faq, .footer {
         padding: 10px 0px 10px 0px;
       }
-      .video, .thermometer, .order, .social {
-        border: 1px dotted;
-        text-align: center;
+
+
+      .video, .thermometer, .order, .social, .statistics {
+           text-align: center;
       }
+
+      .statistics h3, .statistics p {
+           color: white;
+      }
+
+
+      /* Marketing Copy and Footer */
+      .copy {
+         padding-top: 2.5%;
+         padding-bottom: 2.5%;
+         text-align: justify; 
+
+      }
+
+      .asset  {
+          padding: 2.5% 0%;
+      }
+      .footer {
+          color: #cccccc;
+          text-align: center;
+      }
+       .footer p {
+           font-size:11px;
+      }
+
+      .footer a {
+         color: #ccccff;
+      }
+      </style>
+    </head>
+<body>
+
+<!-- Mobile-friendly navvar adapted from example. -->
+<!-- http://twitter.github.io/bootstrap/examples/starter-template.html -->
+ 
+
       .video {
         /* Internal borders have 1px width, thus need to add 4 x 1px to 120px. */
         height: 124px;

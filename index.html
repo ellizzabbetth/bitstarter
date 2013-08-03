@@ -17,16 +17,35 @@
     <link type="text/css" rel="stylesheet" 
           href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-2.3.2.css">
     <style type="text/css">
+
+      /* Large desktop */
+      @media (min-width: 980px) {
+
       body {
-        padding-top: 20px;
-        padding-bottom: 40px;
+        padding-top: 60px;
       }
-      .container {
-        width: 960px;
+      .linediv-l {
+        border-right: 1px white solid;
       }
-      p.lead {
-        padding-top: 15px;
+      .linediv-r {
+        border-left: 1px white solid;
       }
+}
+
+      /* Landscape phones and down */
+      @media (max-width: 480px) {
+      .copy {
+         padding: 2.5% 10%;
+      }
+      .linediv-l {
+        border-bottom: 1px white solid;
+      }
+      .linediv-r {
+          border-top: 1px white solid;
+      |}  
+    }
+
+
       .navigation, .pitch, .section1, .section2, .faq, .footer {
         padding: 10px 0px 10px 0px;
       }
